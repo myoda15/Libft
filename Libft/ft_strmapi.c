@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mande-so <mande-so@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: mande-so <mande-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 13:09:55 by mande-so          #+#    #+#             */
-/*   Updated: 2025/10/29 13:22:35 by mande-so         ###   ########.fr       */
+/*   Updated: 2025/11/05 18:10:23 by mande-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,18 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	mapi[i] = '\0';
 	return (mapi);
 }
+
+/* char	f(unsigned int i, char str)
+{
+	if (str >= 'a' && str <= 'z')
+		str -= 32;
+	return (str);
+}
+
+#include <stdio.h>
+
+int	main()
+{
+	char	*str = "olamundo";
+	printf("%s", ft_strmapi(str, f));
+} */

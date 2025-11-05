@@ -6,13 +6,13 @@
 /*   By: mande-so <mande-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 15:39:07 by mande-so          #+#    #+#             */
-/*   Updated: 2025/11/03 18:12:14 by mande-so         ###   ########.fr       */
+/*   Updated: 2025/11/05 18:17:33 by mande-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	count_words(const char *s, char c)
+static int	count_words(const char *s, char c)
 {
 	int	count;
 
@@ -29,7 +29,7 @@ static	int	count_words(const char *s, char c)
 	return (count);
 }
 
-static	char	*word_copy(const char *s, char c)
+static char	*word_copy(const char *s, char c)
 {
 	char	*w;
 	int		len;
@@ -51,7 +51,20 @@ static	char	*word_copy(const char *s, char c)
 	return (w);
 }
 
-char	**ft_split(char const *s, char c)
+static void	free_split(char **res, int count)
+{
+	int	i;
+
+	i = 0;
+	while (i < count)
+	{
+		free(res[i]);
+		i++;
+	}
+	free(res);
+}
+
+char	**ft_split(const char *s, char c)
 {
 	char	**res;
 	int		i;
@@ -68,11 +81,32 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (*s)
 		{
-			res[i++] = word_copy(s, c);
+			res[i] = word_copy(s, c);
+			if (!res[i])
+				return (free_split(res, i), NULL);
+			i++;
 			while (*s && *s != c)
 				s++;
 		}
 	}
-	res[i] = (NULL);
+	res[i] = NULL;
 	return (res);
 }
+
+/* int	main(void)
+{
+	char	**result;
+	int		i;
+
+	result = ft_split("hello world 42", ' ');
+	
+	i = 0;
+	while (result[i])
+	{
+		printf("%s\n", result[i]);
+		free(result[i]);
+		i++;
+	}
+	free(result);
+	return (0);
+} */

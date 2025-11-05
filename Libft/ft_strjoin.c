@@ -6,7 +6,7 @@
 /*   By: mande-so <mande-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 18:37:45 by mande-so          #+#    #+#             */
-/*   Updated: 2025/11/03 20:09:08 by mande-so         ###   ########.fr       */
+/*   Updated: 2025/11/05 18:10:35 by mande-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join[i] = '\0';
 	return (join);
 }
+
+/* int main(void)
+{
+    char *res = ft_strjoin("Hello, ", "world!");
+    printf("%s\n", res);
+} */

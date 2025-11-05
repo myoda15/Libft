@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mande-so <mande-so@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: mande-so <mande-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 13:44:52 by dosorio-          #+#    #+#             */
-/*   Updated: 2025/11/05 14:11:42 by mande-so         ###   ########.fr       */
+/*   Created: 2025/11/05 18:37:55 by mande-so          #+#    #+#             */
+/*   Updated: 2025/11/05 18:37:57 by mande-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,11 @@ t_list	*ft_lstnew(void *content)
 	node->next = NULL;
 	return (node);
 }
+
+/* #include <stdio.h>
+int	main(void)
+{
+	t_list *n = ft_lstnew("Olá");
+	printf("%s\n", (char *)n->content);
+	return (0);
+} */

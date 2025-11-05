@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mande-so <mande-so@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: mande-so <mande-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 17:39:14 by dosorio-          #+#    #+#             */
-/*   Updated: 2025/11/05 14:11:36 by mande-so         ###   ########.fr       */
+/*   Created: 2025/11/05 18:38:02 by mande-so          #+#    #+#             */
+/*   Updated: 2025/11/05 18:38:05 by mande-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,17 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
+
+/* #include <stdio.h>
+
+int main(void)
+{
+    t_list *lst = ft_lstnew("um");
+    ft_lstadd_back(&lst, ft_lstnew("dois"));
+    ft_lstadd_back(&lst, ft_lstnew("três"));
+
+    printf("%d\n", ft_lstsize(lst));
+
+    return 0;
+}
+ */

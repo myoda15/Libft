@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mande-so <mande-so@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: mande-so <mande-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 15:07:20 by mande-so          #+#    #+#             */
-/*   Updated: 2025/10/27 18:34:23 by mande-so         ###   ########.fr       */
+/*   Updated: 2025/11/05 18:10:16 by mande-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
+
+/*  int main(void)
+{
+    char *s = "Hello, World!";
+    char *sub = ft_substr(s, 2, 3);
+    printf("%s\n", sub);
+}  */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mande-so <mande-so@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: mande-so <mande-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 17:49:14 by dosorio-          #+#    #+#             */
-/*   Updated: 2025/11/05 14:12:34 by mande-so         ###   ########.fr       */
+/*   Created: 2025/11/05 18:38:22 by mande-so          #+#    #+#             */
+/*   Updated: 2025/11/05 18:38:24 by mande-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,22 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	last = ft_lstlast(*lst);
 	last->next = new;
 }
+
+/* #include <stdio.h>
+
+int main(void)
+{
+    t_list *lst = NULL;
+
+    ft_lstadd_back(&lst, ft_lstnew("um"));
+    ft_lstadd_back(&lst, ft_lstnew("dois"));
+    ft_lstadd_back(&lst, ft_lstnew("três"));
+
+    while (lst)
+    {
+        printf("%s\n", (char *)lst->content);
+        lst = lst->next;
+    }
+
+    return 0;
+} */

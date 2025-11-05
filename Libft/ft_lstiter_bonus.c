@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mande-so <mande-so@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: mande-so <mande-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/30 15:42:55 by dosorio-          #+#    #+#             */
-/*   Updated: 2025/11/05 14:12:07 by mande-so         ###   ########.fr       */
+/*   Created: 2025/11/05 18:35:15 by mande-so          #+#    #+#             */
+/*   Updated: 2025/11/05 18:36:35 by mande-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,31 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while (lst != NULL)
+	t_list	*tmp;
+
+	tmp = lst;
+	while (tmp)
 	{
-		f(lst->content);
-		lst = lst->next;
+		f(tmp->content);
+		tmp = tmp->next;
 	}
 }
+
+/* #include <stdio.h>
+
+void imprime(void *content)
+{
+    printf("%s\n", (char *)content);
+}
+
+int main(void)
+{
+    t_list *lst = ft_lstnew("um");
+    ft_lstadd_back(&lst, ft_lstnew("dois"));
+    ft_lstadd_back(&lst, ft_lstnew("três"));
+
+    ft_lstiter(lst, imprime);
+
+    return 0;
+}
+ */

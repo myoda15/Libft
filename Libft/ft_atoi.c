@@ -6,7 +6,7 @@
 /*   By: mande-so <mande-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 10:14:16 by mande-so          #+#    #+#             */
-/*   Updated: 2025/11/03 18:08:16 by mande-so         ###   ########.fr       */
+/*   Updated: 2025/11/05 18:46:08 by mande-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,12 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * res);
 }
+
+/* #include <stdio.h>
+
+int	main()
+{
+	char *str = "-5434";
+	printf("%d", ft_atoi(str));
+}
+ */

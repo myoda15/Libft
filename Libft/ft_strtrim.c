@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mande-so <mande-so@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: mande-so <mande-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 14:58:53 by mande-so          #+#    #+#             */
-/*   Updated: 2025/10/28 15:11:23 by mande-so         ###   ########.fr       */
+/*   Updated: 2025/11/05 18:10:13 by mande-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,10 @@ char	*ft_strtrim(const char *s1, const char *set)
 	trim[i] = '\0';
 	return (trim);
 }
+
+/* int main(void)
+{
+    char *new;
+    new = ft_strtrim("", "d");
+    printf("%s\n", new);
+}  */
